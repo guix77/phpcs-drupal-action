@@ -2,8 +2,8 @@ FROM guillaumeduveau/docker-phpcs-drupal:latest
 
 COPY entrypoint.sh \
      problem-matcher.json \
-     /action/
+     ~/action/
 
-RUN chmod +x /action/entrypoint.sh
+RUN chmod +x ~action/entrypoint.sh
 
-ENTRYPOINT ["/action/entrypoint.sh"]
+ENTRYPOINT ["~/action/entrypoint.sh"]
