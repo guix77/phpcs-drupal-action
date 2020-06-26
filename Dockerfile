@@ -9,4 +9,4 @@ COPY --chown=app:app \
 
 RUN chmod +x ~/action/entrypoint.sh
 
-ENTRYPOINT ["~/action/entrypoint.sh"]
+ENTRYPOINT ["/home/app/action/entrypoint.sh"]
