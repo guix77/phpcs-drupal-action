@@ -1,12 +1,9 @@
 FROM guillaumeduveau/docker-phpcs-drupal:latest
 
-RUN mkdir ~/action
+COPY entrypoint.sh \
+     problem-matcher.json \
+     /app/action/
 
-COPY --chown=app:app \
-                     entrypoint.sh \
-                     problem-matcher.json \
-     /home/app/action/
+RUN chmod +x /app/action/entrypoint.sh
 
-RUN chmod +x ~/action/entrypoint.sh
-
-ENTRYPOINT ["/home/app/action/entrypoint.sh"]
+ENTRYPOINT ["/app/action/entrypoint.sh"]
