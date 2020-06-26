@@ -1,0 +1,9 @@
+name: 'PHPCS Drupal check with Annotations'
+description: 'PHPCS Drupal checker with auto annotations out of the box'
+author: 'Guillaume Duveau'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'code'
+  color: 'blue'
