@@ -3,7 +3,7 @@
     {
       "owner": "phpcs",
       "severity": "error",
-      "pattern": [
+      "patternA": [
         {
           "regexp": "^<file name=\"(?:\\/github\\/workspace\\/)?(.*)\">$",
           "file": 1
