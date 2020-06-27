@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="drupal">
+  <description>PHP CodeSniffer configuration for Drupal development.</description>
+  <file>./web/modules/custom</file>
+  <file>./web/themes/custom</file>
+  <arg name="extensions" value="php,module,inc,install,test,profile,theme,css,info,txt,md,yml" />
+  <config name="drupal_core_version" value="8" />
+  <rule ref="/root/.composer/vendor/drupal/coder/coder_sniffer/Drupal" />
+  <rule ref="/root/.composer/vendor/drupal/coder/coder_sniffer/DrupalPractice" />
+</ruleset>
