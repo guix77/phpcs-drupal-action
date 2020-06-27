@@ -5,7 +5,7 @@ cp /app/ruleset.xml /github/workflow/ruleset.xml
 
 echo "::add-matcher::${RUNNER_TEMP}/_github_workflow/problem-matcher.json"
 
-phpcs  --standard=${RUNNER_TEMP}/_github_workflow/ruleset.xml
+phpcs  --standard=/github/workflow/ruleset.xml
 
 status=$?
 
