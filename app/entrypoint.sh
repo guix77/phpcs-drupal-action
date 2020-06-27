@@ -4,8 +4,7 @@ cp /app/problem-matcher.json /github/workflow/problem-matcher.json
 
 echo "::add-matcher::${RUNNER_TEMP}/_github_workflow/problem-matcher.json"
 
-ls -la
-phpcs --standard=Drupal,DrupalPractice web/modules/custom web/themes/custom
+phpcs --standard=Drupal,DrupalPractice --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md,yml web/modules/custom web/themes/custom
 
 status=$?
 
