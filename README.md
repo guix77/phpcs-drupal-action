@@ -1,4 +1,4 @@
-# Lightweight GitHub action with annotations to check Drupal PHP coding standards
+# Lightweight GitHub action to check Drupal PHP coding standards, with annotations
 
 ![PHPCS Drupal action](./resources/images/phpcs-drupal-action.png)
 
