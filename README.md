@@ -7,6 +7,8 @@ This GitHub action allows to check your code against the Drupal PHP coding stand
 + It has GitHub annotations working out-of-the box, without any special token needed;
 + It's lightweight: unlike most other actions, it does NOT install all your composer dependencies. Thanks to this, a lot of GitHub action minutes can be saved over the time. Also, the action is much quicker. The downside is that the Drupal and DrupalPractice PHPCS standards are fixed and do not depend on your code base.
 
+It uses this Docker image: https://github.com/guix77/docker-phpcs-drupal
+
 ## Requirements
 
 + A Drupal project following the https://github.com/drupal-composer/drupal-project structure;
@@ -54,3 +56,7 @@ That's it.
 + https://github.com/guix77/d8sandbox/blob/master/phpcs.xml
 + https://github.com/guix77/d8sandbox/blob/master/.github/workflows/drupalCodingStandards.yml
 + https://github.com/guix77/d8sandbox/actions
+
+## Credits
+
+Inspired by https://github.com/chekalsky/phpcs-action
