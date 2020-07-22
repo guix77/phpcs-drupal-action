@@ -53,9 +53,9 @@ That's it.
 
 ## Example
 
++ https://github.com/guix77/d8sandbox/actions
 + https://github.com/guix77/d8sandbox/blob/master/phpcs.xml
 + https://github.com/guix77/d8sandbox/blob/master/.github/workflows/drupalCodingStandards.yml
-+ https://github.com/guix77/d8sandbox/actions
 
 ## Credits
 
