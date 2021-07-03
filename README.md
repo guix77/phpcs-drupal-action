@@ -44,12 +44,24 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v2
-        - uses: guix77/phpcs-drupal-action@v1.0.0
+        - uses: guix77/phpcs-drupal-action@v1.0.1
 ````
 
 You can customize the trigger of course (\\\\on: [pull_request]\\\\).
 
 That's it.
+
+## Memory limit
+
+Optionally you could define the memory limit to use when executing phpcs. By default it is set to 128M.
+
+````
+uses: guix77/phpcs-drupal-action@v1.0.1
+with:
+  memory_limit: 512M
+````
+
+Define this if you get an error like: `Fatal error: Allowed memory size of...`.
 
 ## Example
 
