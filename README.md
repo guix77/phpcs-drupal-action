@@ -43,7 +43,7 @@ jobs:
       name: Drupal coding standards
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v2
+        - uses: actions/checkout@v3
         - uses: guix77/phpcs-drupal-action@v1.0.1
 ````
 
@@ -62,12 +62,6 @@ with:
 ````
 
 Define this if you get an error like: `Fatal error: Allowed memory size of...`.
-
-## Example
-
-+ https://github.com/guix77/d8sandbox/actions
-+ https://github.com/guix77/d8sandbox/blob/master/phpcs.xml
-+ https://github.com/guix77/d8sandbox/blob/master/.github/workflows/drupalCodingStandards.yml
 
 ## Credits
 
