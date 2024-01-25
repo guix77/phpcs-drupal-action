@@ -1,7 +1,12 @@
-FROM guillaumeduveau/docker-phpcs-drupal:latest
-
+FROM php:8.3-cli-alpine
+ENV PATH=${PATH}:/root/.composer/vendor/bin
+RUN apk add --no-cache \
+	git && \
+    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
+    composer global require drupal/coder squizlabs/php_codesniffer && \
+    phpcs --config-set installed_paths /root/.composer/vendor/drupal/coder/coder_sniffer/ && \
+    phpcs --config-set default_standard Drupal,DrupalPractice
 COPY app /app
-
 RUN chmod +x /app/entrypoint.sh
-
+WORKDIR /app
 ENTRYPOINT ["/app/entrypoint.sh"]
