@@ -1,13 +1,12 @@
-# Lightweight GitHub action to check Drupal PHP coding standards, with annotations
+# Fast & inexpensive GitHub Action to check Drupal PHP coding standards with annotations
 
 ![PHPCS Drupal action](./resources/images/phpcs-drupal-action.png)
 
-This GitHub action allows to check your code against the Drupal PHP coding standards.
+This GitHub Action allows to **check your code against the Drupal PHP coding standards**.
 
-+ It has GitHub annotations working out-of-the box, without any special token needed;
-+ It's lightweight: unlike most other actions, it does NOT install all your composer dependencies. Thanks to this, a lot of GitHub action minutes can be saved over the time. Also, the action is much quicker. The downside is that the Drupal and DrupalPractice PHPCS standards are fixed and do not depend on your code base.
+It has **GitHub Annotations** working out-of-the box. It's **fast** and **inexpensive** (in terms of GitHub Action minutes) compared to most others. This is because it doesn't install your composer dependencies. The downside is that all components versions are fixed by the version of the action you are using, and not by your code base.
 
-It uses this Docker image: https://github.com/guix77/docker-phpcs-drupal
+The Docker image used by this action is automatically built from this repository on https://quay.io/repository/guix77/phpcs-drupal-action
 
 ## Requirements
 
@@ -25,7 +24,7 @@ In the root of your Drupal project, create ````phpcs.xml````:
   <file>./web/modules/custom</file>
   <file>./web/themes/custom</file>
   <arg name="extensions" value="php,module,inc,install,test,profile,theme,css,info,txt,md,yml" />
-  <config name="drupal_core_version" value="8" />
+  <config name="drupal_core_version" value="10" />
   <rule ref="Drupal" />
   <rule ref="DrupalPractice" />
 </ruleset>
@@ -43,7 +42,7 @@ jobs:
       name: Drupal coding standards
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v3
+        - uses: actions/checkout@v4
         - uses: guix77/phpcs-drupal-action@php8.3
 ````
 
