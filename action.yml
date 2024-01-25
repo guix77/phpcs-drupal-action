@@ -8,7 +8,7 @@ inputs:
     default: '128M'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'quay.io/guix77/phpcs-drupal-action'
 branding:
   icon: 'code'
   color: 'blue'
