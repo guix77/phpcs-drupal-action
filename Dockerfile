@@ -5,7 +5,6 @@ RUN apk add --no-cache \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
     composer global config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true && \
     composer global require drupal/coder squizlabs/php_codesniffer && \
-    phpcs --config-set installed_paths /root/.composer/vendor/drupal/coder/coder_sniffer/ && \
     phpcs --config-set default_standard Drupal,DrupalPractice
 COPY app /app
 RUN chmod +x /app/entrypoint.sh
