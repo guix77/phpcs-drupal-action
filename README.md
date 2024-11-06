@@ -4,7 +4,7 @@
 
 This GitHub Action allows to **check your code against the Drupal PHP coding standards**.
 
-It has **GitHub Annotations** working out-of-the box. It's **fast** and **inexpensive** (in terms of GitHub Action minutes) compared to most others. This is because it doesn't install your composer dependencies. The downside is that all components versions are fixed by the version of the action you are using, and not by your code base.
+It has **GitHub Annotations** working out-of-the box. It's **fast** and **inexpensive** (in terms of GitHub Action minutes) compared to most others. This is because it doesn't install composer dependencies. The downside is that all components versions are fixed by the version of the action you are using, and not by your code base.
 
 The Docker image used by this action is automatically built from this repository on https://quay.io/repository/guix77/phpcs-drupal-action
 
