@@ -1,4 +1,4 @@
-FROM php:8.4-cli-alpine
+FROM php:8.4.0RC3-cli-alpine
 ENV PATH=${PATH}:/root/.composer/vendor/bin
 RUN apk add --no-cache \
 	git && \
